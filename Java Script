@@ -1,0 +1,40 @@
+// script.js
+
+let waterCount = 0;
+let calorieCount = 0;
+
+// Function to add a glass of water
+function addWater() {
+    waterCount++;
+    document.getElementById("water-count").innerText = waterCount;
+}
+
+// Function to add calories
+function addCalories() {
+    const calorieInput = document.getElementById("calorie-input").value;
+    if (calorieInput) {
+        calorieCount += parseInt(calorieInput);
+        document.getElementById("calorie-count").innerText = calorieCount;
+        document.getElementById("calorie-input").value = "";
+    } else {
+        alert("Please enter calorie amount.");
+    }
+}
+
+// Function to add an exercise
+function addExercise() {
+    const exerciseInput = document.getElementById("exercise-input").value;
+    const durationInput = document.getElementById("duration-input").value;
+    
+    if (exerciseInput && durationInput) {
+        const exerciseList = document.getElementById("exercise-list");
+        const listItem = document.createElement("li");
+        listItem.innerText = `${exerciseInput} - ${durationInput} mins`;
+        exerciseList.appendChild(listItem);
+        
+        document.getElementById("exercise-input").value = "";
+        document.getElementById("duration-input").value = "";
+    } else {
+        alert("Please enter both exercise type and duration.");
+    }
+}
