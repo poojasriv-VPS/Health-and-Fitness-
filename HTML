@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Health and Fitness Tracker</h1>
+        
+        <!-- Water Intake Section -->
+        <section class="section">
+            <h2>Water Intake</h2>
+            <p>Glasses of Water Drunk Today: <span id="water-count">0</span></p>
+            <button onclick="addWater()">Add Glass</button>
+        </section>
+        
+        <!-- Calorie Intake Section -->
+        <section class="section">
+            <h2>Calorie Intake</h2>
+            <input type="number" id="calorie-input" placeholder="Enter calories" />
+            <button onclick="addCalories()">Add Calories</button>
+            <p>Total Calories Today: <span id="calorie-count">0</span> kcal</p>
+        </section>
+        
+        <!-- Exercise Section -->
+        <section class="section">
+            <h2>Exercise Tracker</h2>
+            <input type="text" id="exercise-input" placeholder="Exercise (e.g., Running)" />
+            <input type="number" id="duration-input" placeholder="Duration (mins)" />
+            <button onclick="addExercise()">Add Exercise</button>
+            <ul id="exercise-list"></ul>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
